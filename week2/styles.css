@@ -1,0 +1,60 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive;
+}
+
+h2 {
+    color: #3046C5;
+}
+
+header h2 {
+    color: #CEC8FF;
+
+   
+}
+
+footer {
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0;
+}
+
+.jumbotron-fluid {
+    padding: 30px;
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white;
+
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.about{
+    padding-top: 30px;
+  
+}
+
+/* if the viewport is >=766 then add the content to .about */
+@media(min-width: 766px){
+    .about{
+        margin:0px 30px;
+    }
+}
+
+.our{
+    margin-top: 70px;
+}
+
+.community{
+    /* top left-right bottom */
+    margin: 100px 0px 50px;
+}
+
+.navbar{
+    background-color:  #f359e1;
+}
