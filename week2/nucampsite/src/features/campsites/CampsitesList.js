@@ -1,14 +1,21 @@
-import { Col, Row } from "reactstrap";
-import { CAMPSITES } from "../../app/shared/CAMPSITES";
-import CampsiteCard from "./CampsiteCard";
+// CampsitesList.js
 
-const CampsitesList = () => {
+import { Col, Row } from "reactstrap";
+import CampsiteCard from "./CampsiteCard";
+import { selectAllCampsites } from "./campsitesSlice";
+
+
+const CampsitesList = ({ setCampsiteId }) => {
+  const campsites = selectAllCampsites();
+
   return (
     <Row className="ms-auto">
-      {CAMPSITES.map((campsite) => {
+      {campsites.map((campsitex) => {
         return (
-          <Col md="5" className="m-4" key={campsite.id}>
-            <CampsiteCard campsite={campsite} />
+          <Col md="5" className="m-4" key={campsitex.id} 
+          onClick={()=>setCampsiteId(campsitex.id)}
+          >
+            <CampsiteCard campsite={campsitex} />
           </Col>
         );
       })}
