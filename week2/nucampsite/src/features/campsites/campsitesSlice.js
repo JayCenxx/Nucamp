@@ -10,7 +10,8 @@ export const selectRandomCampsite=()=>{
 }
 
 export const selectCampsiteById=(id)=>{
-    return CAMPSITES.find(campsite=>campsite.id===id)
+    // parseInt() convert string to Int
+    return CAMPSITES.find(campsite=>campsite.id===parseInt(id))
 }
 
 export const selectFeaturedCampsite=()=>{
